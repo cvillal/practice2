@@ -61,7 +61,7 @@ router.delete('/:id', (req, res) => {
     const found = members.some(member => member.id == req.params.id);
    
     if(found){
-        res.json({msg: 'Member deleted', members: members.filter(member => member.id !== req.params.id)});
+        res.json({msg: 'Member deleted', members: members.filter(member => member.id !=req.params.id)});
     }else {
       res.status(400).json({msg: `No member with the id of ${req.params.id}`});  
     }
